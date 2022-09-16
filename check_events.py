@@ -21,6 +21,7 @@ class FileEventHandler (FileSystemEventHandler) :
 
 
 
+
 event_handler = FileEventHandler()
 observer = Observer()
 observer.schedule(event_handler,from_dir,recursive=True)
@@ -28,9 +29,9 @@ observer.start()
 try:
   while True:
     time.sleep(2)
-    print('Running .',end='\r')
-    time.sleep(1)
-    print('Running ..',end='\r')
+    print('Running . . .',end='\r')
+
+
 except KeyboardInterrupt:
     print('Stopped')
     observer.stop()
